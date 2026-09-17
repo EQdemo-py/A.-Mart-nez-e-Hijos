@@ -112,3 +112,30 @@ body {
     font-size: 12px;
   }
 }
+
+/* =========================================================
+   A. MARTINEZ - SLIDESHOW RESPONSIVE
+   Desktop: 1920 x 900
+   Mobile: 750 x 507
+   ========================================================= */
+
+.am-slideshow-picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.am-slideshow-picture__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 749px) {
+  .am-slideshow-picture,
+  .am-slideshow-picture__image {
+    width: 100%;
+    height: 100%;
+  }
+}

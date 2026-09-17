@@ -120,35 +120,66 @@
         aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
         tabindex="-1"
       >
-        <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}">
-          {%- if block.settings.image -%}
+        <div class="slideshow__media banner__media media{% if block.settings.image == blank and block.settings.image_mobile == blank %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}">
+          {%- if block.settings.image or block.settings.image_mobile -%}
             {%- liquid
-              assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round
-              if section.settings.image_behavior == 'ambient'
-                assign sizes = '120vw'
-                assign widths = '450, 660, 900, 1320, 1800, 2136, 2400, 3600, 7680'
-              else
-                assign sizes = '100vw'
-                assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+              assign desktop_image = block.settings.image
+              assign mobile_image = block.settings.image_mobile
+
+              if desktop_image == blank
+                assign desktop_image = mobile_image
               endif
+
+              if mobile_image == blank
+                assign mobile_image = desktop_image
+              endif
+
+              assign desktop_height = desktop_image.width | divided_by: desktop_image.aspect_ratio | round
+              assign mobile_height = mobile_image.width | divided_by: mobile_image.aspect_ratio | round
+
               assign fetch_priority = 'auto'
               if section.index == 1
                 assign fetch_priority = 'high'
               endif
             -%}
-            {%- if forloop.first %}
-              {{
-                block.settings.image
-                | image_url: width: 3840
-                | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
-              }}
-            {%- else -%}
-              {{
-                block.settings.image
-                | image_url: width: 3840
-                | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
-              }}
-            {%- endif -%}
+
+            <picture class="am-slideshow-picture">
+              <source
+                media="(max-width: 749px)"
+                srcset="
+                  {{ mobile_image | image_url: width: 375 }} 375w,
+                  {{ mobile_image | image_url: width: 550 }} 550w,
+                  {{ mobile_image | image_url: width: 750 }} 750w,
+                  {{ mobile_image | image_url: width: 1000 }} 1000w
+                "
+                sizes="100vw"
+              >
+
+              {%- if forloop.first -%}
+                {{
+                  desktop_image
+                  | image_url: width: 3840
+                  | image_tag:
+                    height: desktop_height,
+                    sizes: '100vw',
+                    widths: '750, 1100, 1500, 1920, 2400, 3000, 3840',
+                    fetchpriority: fetch_priority,
+                    class: 'am-slideshow-picture__image'
+                }}
+              {%- else -%}
+                {{
+                  desktop_image
+                  | image_url: width: 3840
+                  | image_tag:
+                    loading: 'lazy',
+                    height: desktop_height,
+                    sizes: '100vw',
+                    widths: '750, 1100, 1500, 1920, 2400, 3000, 3840',
+                    class: 'am-slideshow-picture__image'
+                }}
+              {%- endif -%}
+            </picture>
+
           {%- else -%}
             {%- assign placeholder_slide = forloop.index | modulo: 2 -%}
             {%- if placeholder_slide == 1 -%}
@@ -393,7 +424,12 @@
         {
           "type": "image_picker",
           "id": "image",
-          "label": "t:sections.slideshow.blocks.slide.settings.image.label"
+          "label": "Imagen de escritorio (recomendado 1920 x 900 px)"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Imagen móvil (recomendado 750 x 507 px)"
         },
         {
           "type": "range",
