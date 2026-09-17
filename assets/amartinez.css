@@ -139,3 +139,37 @@ body {
     height: 100%;
   }
 }
+
+/* =========================================================
+   FIX SLIDESHOW MOBILE - A. MARTINEZ
+   La altura sigue la proporcion del banner 750 x 507
+   ========================================================= */
+
+@media screen and (max-width: 749px) {
+  .slideshow.banner,
+  .slideshow .slideshow__slide,
+  .slideshow .banner__media,
+  .slideshow__media {
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  .slideshow__media {
+    position: relative !important;
+    aspect-ratio: 750 / 507;
+  }
+
+  .slideshow__media .am-slideshow-picture {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .slideshow__media .am-slideshow-picture__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
