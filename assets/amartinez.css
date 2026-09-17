@@ -1,0 +1,114 @@
+/* =========================================================
+   A. MARTINEZ E HIJOS
+   eQuantum Ecommerce Demo
+   Shopify Trade 16
+   ========================================================= */
+
+:root {
+  --am-navy: #0b2742;
+  --am-navy-dark: #071b2e;
+  --am-red: #d7193f;
+  --am-text: #10263d;
+  --am-muted: #667382;
+  --am-border: #e5e9ed;
+  --am-background: #ffffff;
+  --am-soft: #f6f7f8;
+}
+
+body {
+  color: var(--am-text);
+  background: var(--am-background);
+}
+
+/* Announcement bar */
+.announcement-bar {
+  background: var(--am-navy) !important;
+  color: #fff !important;
+}
+
+.announcement-bar__message {
+  color: #fff !important;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+/* Header */
+.header-wrapper {
+  background: #fff;
+  border-bottom: 1px solid var(--am-border);
+}
+
+.header {
+  max-width: 1440px;
+}
+
+.header__heading-link {
+  text-decoration: none;
+}
+
+.header__menu-item {
+  color: var(--am-text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.header__menu-item:hover,
+.header__active-menu-item {
+  color: var(--am-red);
+}
+
+.header__search,
+.header__icon {
+  color: var(--am-navy);
+}
+
+/* Buttons */
+.button,
+.shopify-payment-button__button {
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* Product cards */
+.card-wrapper .card {
+  border-radius: 8px;
+}
+
+.card__heading {
+  color: var(--am-text);
+  font-weight: 600;
+}
+
+.price {
+  color: var(--am-navy);
+  font-weight: 700;
+}
+
+/* Collections */
+.collection__title .title,
+.title-wrapper-with-link .title {
+  color: var(--am-text);
+  font-weight: 700;
+}
+
+/* Footer */
+.footer {
+  background: var(--am-navy-dark);
+  color: #fff;
+}
+
+.footer a,
+.footer .link {
+  color: #fff;
+}
+
+@media screen and (max-width: 749px) {
+  .header {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .announcement-bar__message {
+    font-size: 12px;
+  }
+}
