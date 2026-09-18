@@ -139,3 +139,49 @@ body {
     height: 100%;
   }
 }
+
+/* =========================================================
+   A. MARTINEZ - MULTICOLUMNA / MARCAS
+   ========================================================= */
+
+.multicolumn .multicolumn-card,
+.multicolumn .content-container {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.multicolumn .multicolumn-card::before,
+.multicolumn .content-container::after {
+  display: none !important;
+}
+
+.multicolumn .multicolumn-card__info {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Mobile: grilla real, sin carrusel ni contador */
+@media screen and (max-width: 749px) {
+  .multicolumn .slider-buttons {
+    display: none !important;
+  }
+
+  .multicolumn .multicolumn-list {
+    scroll-snap-type: none !important;
+    overflow: visible !important;
+  }
+
+  .multicolumn .multicolumn-list__item {
+    scroll-snap-align: none !important;
+  }
+
+  .multicolumn .grid--3-col-tablet-down {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .multicolumn .grid--3-col-tablet-down .grid__item {
+    width: 100%;
+    max-width: 100%;
+  }
+}

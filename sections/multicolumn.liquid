@@ -18,9 +18,6 @@
 {%- liquid
   assign columns_mobile_int = section.settings.columns_mobile | plus: 0
   assign show_mobile_slider = false
-  if section.settings.swipe_on_mobile and section.blocks.size > columns_mobile_int
-    assign show_mobile_slider = true
-  endif
 -%}
 
 <div class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
@@ -305,9 +302,9 @@
       "type": "range",
       "id": "columns_desktop",
       "min": 1,
-      "max": 6,
+      "max": 8,
       "step": 1,
-      "default": 3,
+      "default": 6,
       "label": "t:sections.multicolumn.settings.columns_desktop.label"
     },
     {
@@ -363,9 +360,13 @@
         {
           "value": "2",
           "label": "t:sections.multicolumn.settings.columns_mobile.options__2.label"
+        },
+        {
+          "value": "3",
+          "label": "3 columnas"
         }
       ],
-      "default": "1",
+      "default": "3",
       "label": "t:sections.multicolumn.settings.columns_mobile.label"
     },
     {
