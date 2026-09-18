@@ -47,96 +47,13 @@
         "accessibility_info": ""
       }
     },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "Insert partner logo",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Insert partner logo",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Insert partner logo",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column4": {
-          "type": "column",
-          "settings": {
-            "title": "Insert partner logo",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column5": {
-          "type": "column",
-          "settings": {
-            "title": "Insert partner logo",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column6": {
-          "type": "column",
-          "settings": {
-            "title": "Insert partner logo",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3",
-        "column4",
-        "column5",
-        "column6"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 6,
-        "column_alignment": "center",
-        "background_style": "none",
-        "color_scheme": "scheme-2",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 12,
-        "padding_bottom": 12
-      }
-    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Outstanding service | Exclusive pricing | Industry expertise</p>"
+            "text": "<p>NUESTRAS MARCAS</p>"
           }
         }
       },
@@ -150,6 +67,140 @@
         "full_width": true,
         "padding_top": 4,
         "padding_bottom": 4
+      }
+    },
+    "am_marcas_repYRH": {
+      "type": "am-marcas",
+      "blocks": {
+        "brand_3VmjUT": {
+          "type": "brand",
+          "settings": {
+            "logo": "shopify://shop_images/Imagen_de_Codex_18_sept_2026_08_37_36_a.m..png",
+            "name": "",
+            "link": ""
+          }
+        },
+        "brand_MdrNTD": {
+          "type": "brand",
+          "settings": {
+            "logo": "shopify://shop_images/Imagen_de_Codex_18_sept_2026_08_40_35_a.m..png",
+            "name": "",
+            "link": ""
+          }
+        },
+        "brand_fJCHBg": {
+          "type": "brand",
+          "settings": {
+            "logo": "shopify://shop_images/Imagen_de_Codex_18_sept_2026_08_39_03_a.m..png",
+            "name": "",
+            "link": ""
+          }
+        },
+        "brand_n9eMAh": {
+          "type": "brand",
+          "settings": {
+            "logo": "shopify://shop_images/Imagen_de_Codex_18_sept_2026_08_41_44_a.m..png",
+            "name": "",
+            "link": ""
+          }
+        },
+        "brand_Mh6YDc": {
+          "type": "brand",
+          "settings": {
+            "logo": "shopify://shop_images/Imagen_de_Codex_18_sept_2026_08_45_10_a.m..png",
+            "name": "",
+            "link": ""
+          }
+        },
+        "brand_eMRC6W": {
+          "type": "brand",
+          "settings": {
+            "logo": "shopify://shop_images/Imagen_de_Codex_18_sept_2026_08_42_58_a.m..png",
+            "name": "",
+            "link": ""
+          }
+        },
+        "brand_AXHdhM": {
+          "type": "brand",
+          "settings": {
+            "logo": "shopify://shop_images/Imagen_de_Codex_18_sept_2026_08_50_53_a.m..png",
+            "name": "",
+            "link": ""
+          }
+        },
+        "brand_fqBaeJ": {
+          "type": "brand",
+          "settings": {
+            "logo": "shopify://shop_images/Imagen_de_Codex_18_sept_2026_08_54_37_a.m..png",
+            "name": "",
+            "link": ""
+          }
+        },
+        "brand_meRMab": {
+          "type": "brand",
+          "settings": {
+            "logo": "shopify://shop_images/Imagen_de_Codex_18_sept_2026_08_58_35_a.m..png",
+            "name": "",
+            "link": ""
+          }
+        },
+        "brand_PGcbaV": {
+          "type": "brand",
+          "settings": {
+            "logo": "shopify://shop_images/Imagen_de_Codex_18_sept_2026_08_48_26_a.m..png",
+            "name": "",
+            "link": ""
+          }
+        },
+        "brand_Lb49tk": {
+          "type": "brand",
+          "settings": {
+            "logo": "shopify://shop_images/Imagen_de_Codex_18_sept_2026_09_01_56_a.m..png",
+            "name": "",
+            "link": ""
+          }
+        },
+        "brand_g8kyPh": {
+          "type": "brand",
+          "settings": {
+            "logo": "shopify://shop_images/Imagen_de_Codex_18_sept_2026_09_07_13_a.m..png",
+            "name": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "brand_3VmjUT",
+        "brand_MdrNTD",
+        "brand_fJCHBg",
+        "brand_n9eMAh",
+        "brand_Mh6YDc",
+        "brand_eMRC6W",
+        "brand_AXHdhM",
+        "brand_fqBaeJ",
+        "brand_meRMab",
+        "brand_PGcbaV",
+        "brand_Lb49tk",
+        "brand_g8kyPh"
+      ],
+      "name": "A. Martínez — Marcas",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "columns_desktop": 6,
+        "logo_height": 120,
+        "gap": 8,
+        "max_width": 1600,
+        "columns_mobile": "3",
+        "mobile_carousel": true,
+        "logo_height_mobile": 100,
+        "gap_mobile": 4,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 24,
+        "color_scheme": ""
       }
     },
     "featured_collection1": {
@@ -391,8 +442,8 @@
   },
   "order": [
     "slideshow_WyFQcT",
-    "multicolumn",
     "rich_text",
+    "am_marcas_repYRH",
     "featured_collection1",
     "collection_list",
     "multicolumn1",
