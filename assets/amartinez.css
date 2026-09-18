@@ -185,3 +185,162 @@ body {
     max-width: 100%;
   }
 }
+
+/* =========================================================
+   A. MARTINEZ - HEADER ECOMMERCE V2
+   ========================================================= */
+
+@media screen and (min-width: 990px) {
+
+  .section-header .header-wrapper {
+    background: #fff;
+    border-bottom: 1px solid #e7e9ec;
+  }
+
+  .section-header .header {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 14px 32px 10px;
+
+    display: grid;
+    grid-template-columns: minmax(190px, 240px) minmax(420px, 1fr) auto;
+    grid-template-areas:
+      "logo search icons"
+      "logo navigation icons";
+
+    column-gap: 34px;
+    row-gap: 8px;
+    align-items: center;
+  }
+
+  .section-header .header__heading,
+  .section-header .header__heading-link {
+    grid-area: logo;
+    justify-self: start;
+    margin: 0;
+  }
+
+  .section-header .header__heading-logo-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .section-header .header__heading-logo {
+    width: auto;
+    max-width: 220px;
+    max-height: 64px;
+    object-fit: contain;
+  }
+
+  /* MENU PRINCIPAL */
+
+  .section-header .header__inline-menu {
+    grid-area: navigation;
+    justify-self: start;
+    margin: 0;
+  }
+
+  .section-header .header__inline-menu .list-menu--inline {
+    gap: 6px;
+  }
+
+  .section-header .header__menu-item {
+    padding: 8px 13px;
+    color: #0b2742;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .section-header .header__menu-item:hover,
+  .section-header .header__active-menu-item {
+    color: #c51635;
+  }
+
+  /* BUSCADOR */
+
+  .section-header .header__search {
+    grid-area: search;
+    justify-self: stretch;
+    width: 100%;
+  }
+
+  .section-header .header__search summary {
+    width: 100%;
+    height: 42px;
+    min-width: 420px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    border: 1px solid #d7dce1;
+    border-radius: 7px;
+    background: #fff;
+  }
+
+  .section-header .header__search summary::before {
+    content: "¿Qué estás buscando?";
+    flex: 1;
+    padding-left: 16px;
+    text-align: left;
+
+    color: #747b83;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .section-header .header__search .header__icon {
+    width: 44px;
+    height: 40px;
+  }
+
+  /* ICONOS */
+
+  .section-header .header__icons {
+    grid-area: icons;
+    justify-self: end;
+    align-self: center;
+    gap: 4px;
+  }
+
+  .section-header .header__icon {
+    color: #0b2742;
+  }
+
+  .section-header .header__icon:hover {
+    color: #c51635;
+  }
+
+  .section-header .header__icon--cart {
+    margin-right: 0;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 989px) {
+
+  .section-header .header-wrapper {
+    background: #fff;
+    border-bottom: 1px solid #e7e9ec;
+  }
+
+  .section-header .header {
+    min-height: 64px;
+    padding: 8px 16px;
+  }
+
+  .section-header .header__heading-logo {
+    width: auto;
+    max-width: 150px;
+    max-height: 44px;
+    object-fit: contain;
+  }
+
+  .section-header .header__icon {
+    color: #0b2742;
+  }
+}
