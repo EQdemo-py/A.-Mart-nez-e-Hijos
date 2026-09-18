@@ -526,38 +526,3 @@ body {
     min-width: 100px;
   }
 }
-
-/* =========================================================
-   A. MARTINEZ - CENTRAR BUSCADOR DESKTOP
-   ========================================================= */
-
-@media screen and (min-width: 990px) {
-
-  .section-header .header {
-    grid-template-columns: 1fr minmax(500px, 620px) 1fr;
-    grid-template-areas:
-      "logo search icons"
-      "navigation navigation navigation";
-  }
-
-  .section-header .header__heading,
-  .section-header .header__heading-link {
-    justify-self: start;
-  }
-
-  .section-header .header__search {
-    grid-area: search;
-    width: 100%;
-    max-width: 620px;
-    justify-self: center;
-  }
-
-  .section-header .header__search summary {
-    width: 100%;
-    min-width: 0;
-  }
-
-  .section-header .header__icons {
-    justify-self: end;
-  }
-}
