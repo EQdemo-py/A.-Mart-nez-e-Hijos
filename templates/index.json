@@ -188,7 +188,7 @@
         "title": "",
         "heading_size": "h1",
         "heading_alignment": "center",
-        "columns_desktop": 6,
+        "columns_desktop": 8,
         "desktop_carousel": true,
         "logo_height": 150,
         "gap": 8,
