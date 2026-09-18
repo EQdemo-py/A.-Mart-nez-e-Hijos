@@ -9,84 +9,6 @@
  */
 {
   "sections": {
-    "am_marcas_RHMpq7": {
-      "type": "am-marcas",
-      "blocks": {
-        "brand_DAhbra": {
-          "type": "brand",
-          "settings": {
-            "logo": "shopify://shop_images/Imagen_de_Codex_18_sept_2026_10_10_32_a.m..png",
-            "name": "Hogar",
-            "link": "shopify://collections/hogar"
-          }
-        },
-        "brand_Uq9Jej": {
-          "type": "brand",
-          "settings": {
-            "logo": "shopify://shop_images/Imagen_de_Codex_18_sept_2026_10_13_05_a.m..png",
-            "name": "Termos",
-            "link": "shopify://collections/termos-y-terere"
-          }
-        },
-        "brand_AtWCJ9": {
-          "type": "brand",
-          "settings": {
-            "logo": "shopify://shop_images/Imagen_de_Codex_18_sept_2026_10_14_37_a.m..png",
-            "name": "Oficina",
-            "link": "shopify://collections/escolar-y-oficina"
-          }
-        },
-        "brand_AwQNjR": {
-          "type": "brand",
-          "settings": {
-            "name": "",
-            "link": ""
-          }
-        },
-        "brand_ECDYPN": {
-          "type": "brand",
-          "settings": {
-            "name": "",
-            "link": ""
-          }
-        },
-        "brand_XtzfPm": {
-          "type": "brand",
-          "settings": {
-            "name": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "brand_DAhbra",
-        "brand_Uq9Jej",
-        "brand_AtWCJ9",
-        "brand_AwQNjR",
-        "brand_ECDYPN",
-        "brand_XtzfPm"
-      ],
-      "name": "A. Martínez — Marcas",
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "columns_desktop": 6,
-        "desktop_carousel": false,
-        "logo_height": 100,
-        "gap": 24,
-        "max_width": 1400,
-        "columns_mobile": "3",
-        "mobile_carousel": true,
-        "logo_height_mobile": 80,
-        "gap_mobile": 16,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 24,
-        "padding_bottom_mobile": 24,
-        "color_scheme": ""
-      }
-    },
     "slideshow_WyFQcT": {
       "type": "slideshow",
       "blocks": {
@@ -278,6 +200,85 @@
         "gap_mobile": 4,
         "padding_top": 8,
         "padding_bottom": 8,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 24,
+        "color_scheme": ""
+      }
+    },
+    "am_marcas_RHMpq7": {
+      "type": "am-marcas",
+      "blocks": {
+        "brand_AtWCJ9": {
+          "type": "brand",
+          "settings": {
+            "logo": "shopify://shop_images/Imagen_de_Codex_18_sept_2026_10_44_02_a.m..png",
+            "name": "Oficina",
+            "link": "shopify://collections/escolar-y-oficina"
+          }
+        },
+        "brand_Uq9Jej": {
+          "type": "brand",
+          "settings": {
+            "logo": "shopify://shop_images/Imagen_de_Codex_18_sept_2026_10_46_06_a.m..png",
+            "name": "Termos",
+            "link": "shopify://collections/termos-y-terere"
+          }
+        },
+        "brand_DAhbra": {
+          "type": "brand",
+          "settings": {
+            "logo": "shopify://shop_images/Imagen_de_Codex_18_sept_2026_10_48_11_a.m..png",
+            "name": "Hogar",
+            "link": "shopify://collections/hogar"
+          }
+        },
+        "brand_AwQNjR": {
+          "type": "brand",
+          "settings": {
+            "logo": "shopify://shop_images/Imagen_de_Codex_18_sept_2026_11_04_15_a.m..png",
+            "name": "Cuidado personal",
+            "link": "shopify://collections/cuidado-personal"
+          }
+        },
+        "brand_ECDYPN": {
+          "type": "brand",
+          "settings": {
+            "name": "",
+            "link": ""
+          }
+        },
+        "brand_XtzfPm": {
+          "type": "brand",
+          "settings": {
+            "name": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "brand_AtWCJ9",
+        "brand_Uq9Jej",
+        "brand_DAhbra",
+        "brand_AwQNjR",
+        "brand_ECDYPN",
+        "brand_XtzfPm"
+      ],
+      "name": "A. Martínez — Marcas",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "columns_desktop": 6,
+        "desktop_carousel": false,
+        "logo_height": 100,
+        "gap": 24,
+        "max_width": 1400,
+        "columns_mobile": "3",
+        "mobile_carousel": true,
+        "logo_height_mobile": 80,
+        "gap_mobile": 16,
+        "padding_top": 36,
+        "padding_bottom": 36,
         "padding_top_mobile": 24,
         "padding_bottom_mobile": 24,
         "color_scheme": ""
@@ -521,10 +522,10 @@
     }
   },
   "order": [
-    "am_marcas_RHMpq7",
     "slideshow_WyFQcT",
     "rich_text",
     "am_marcas_repYRH",
+    "am_marcas_RHMpq7",
     "featured_collection1",
     "collection_list",
     "multicolumn1",
