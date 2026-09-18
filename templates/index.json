@@ -243,6 +243,7 @@
         "brand_ECDYPN": {
           "type": "brand",
           "settings": {
+            "logo": "shopify://shop_images/Imagen_de_Codex_18_sept_2026_11_07_24_a.m..png",
             "name": "",
             "link": ""
           }
