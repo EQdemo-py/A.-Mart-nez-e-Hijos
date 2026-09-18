@@ -344,3 +344,185 @@ body {
     color: #0b2742;
   }
 }
+
+/* =========================================================
+   A. MARTINEZ - HEADER V2.1
+   Estructura ecommerce desktop
+   ========================================================= */
+
+@media screen and (min-width: 990px) {
+
+  .section-header .header {
+    max-width: 1440px;
+    padding: 12px 32px 0;
+
+    grid-template-columns: 220px minmax(460px, 1fr) auto;
+    grid-template-areas:
+      "logo search icons"
+      "navigation navigation navigation";
+
+    column-gap: 32px;
+    row-gap: 8px;
+  }
+
+  .section-header .header__heading,
+  .section-header .header__heading-link {
+    align-self: center;
+  }
+
+  .section-header .header__heading-logo {
+    max-width: 200px;
+    max-height: 58px;
+  }
+
+  /* Segunda fila de navegación */
+
+  .section-header .header__inline-menu {
+    width: 100%;
+    min-height: 42px;
+    margin: 0;
+    border-top: 1px solid #eef0f2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section-header .header__inline-menu .list-menu--inline {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .section-header .header__menu-item {
+    min-height: 42px;
+    padding: 0 16px;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 14px;
+    font-weight: 600;
+    color: #0b2742;
+  }
+
+  .section-header .header__active-menu-item {
+    color: #c51635;
+    text-decoration: none;
+  }
+
+  .section-header .header__menu-item:hover {
+    color: #c51635;
+    text-decoration: none;
+  }
+
+  /* Buscador más ecommerce */
+
+  .section-header .header__search summary {
+    height: 46px;
+    border-radius: 6px;
+    border-color: #cfd5db;
+  }
+
+  .section-header .header__search summary::before {
+    font-size: 14px;
+    color: #6d747c;
+  }
+
+  .section-header .header__icons {
+    min-width: 100px;
+  }
+}
+
+/* =========================================================
+   A. MARTINEZ - HEADER V2.1
+   Estructura ecommerce desktop
+   ========================================================= */
+
+@media screen and (min-width: 990px) {
+
+  .section-header .header {
+    max-width: 1440px;
+    padding: 12px 32px 0;
+
+    grid-template-columns: 220px minmax(460px, 1fr) auto;
+    grid-template-areas:
+      "logo search icons"
+      "navigation navigation navigation";
+
+    column-gap: 32px;
+    row-gap: 8px;
+  }
+
+  .section-header .header__heading,
+  .section-header .header__heading-link {
+    align-self: center;
+  }
+
+  .section-header .header__heading-logo {
+    max-width: 200px;
+    max-height: 58px;
+  }
+
+  /* Segunda fila de navegación */
+
+  .section-header .header__inline-menu {
+    width: 100%;
+    min-height: 42px;
+    margin: 0;
+    border-top: 1px solid #eef0f2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section-header .header__inline-menu .list-menu--inline {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .section-header .header__menu-item {
+    min-height: 42px;
+    padding: 0 16px;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 14px;
+    font-weight: 600;
+    color: #0b2742;
+  }
+
+  .section-header .header__active-menu-item {
+    color: #c51635;
+    text-decoration: none;
+  }
+
+  .section-header .header__menu-item:hover {
+    color: #c51635;
+    text-decoration: none;
+  }
+
+  /* Buscador más ecommerce */
+
+  .section-header .header__search summary {
+    height: 46px;
+    border-radius: 6px;
+    border-color: #cfd5db;
+  }
+
+  .section-header .header__search summary::before {
+    font-size: 14px;
+    color: #6d747c;
+  }
+
+  .section-header .header__icons {
+    min-width: 100px;
+  }
+}
