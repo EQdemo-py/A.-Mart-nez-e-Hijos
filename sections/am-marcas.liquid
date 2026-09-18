@@ -25,6 +25,78 @@
     margin: 0;
   }
 
+  #AMMarcas-{{ section.id }} .am-marcas__carousel {
+    position: relative;
+  }
+
+  #AMMarcas-{{ section.id }} .am-marcas__arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid rgba(11, 39, 66, 0.12);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.82);
+    color: #0b2742;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition:
+      background .2s ease,
+      box-shadow .2s ease,
+      opacity .2s ease;
+  }
+
+  #AMMarcas-{{ section.id }} .am-marcas__arrow:hover {
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.14);
+  }
+
+  #AMMarcas-{{ section.id }} .am-marcas__arrow--prev {
+    left: -12px;
+  }
+
+  #AMMarcas-{{ section.id }} .am-marcas__arrow--next {
+    right: -12px;
+  }
+
+  #AMMarcas-{{ section.id }} .am-marcas__arrow svg {
+    width: 18px;
+    height: 18px;
+    display: block;
+  }
+
+  #AMMarcas-{{ section.id }} .am-marcas__arrow[disabled] {
+    opacity: .25;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  #AMMarcas-{{ section.id }} .am-marcas__arrow--desktop,
+  #AMMarcas-{{ section.id }} .am-marcas__arrow--mobile {
+    display: none;
+  }
+
+  {% if section.settings.desktop_carousel %}
+    @media screen and (min-width: 750px) {
+      #AMMarcas-{{ section.id }} .am-marcas__arrow--desktop {
+        display: flex;
+      }
+
+      #AMMarcas-{{ section.id }} .am-marcas__grid {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  {% endif %}
+
   #AMMarcas-{{ section.id }} .am-marcas__grid {
     display: grid;
     grid-template-columns: repeat(var(--am-columns-desktop), minmax(0, 1fr));
@@ -97,6 +169,30 @@
   {% endif %}
 
   @media screen and (max-width: 749px) {
+    {% if section.settings.mobile_carousel %}
+      #AMMarcas-{{ section.id }} .am-marcas__arrow--mobile {
+        display: flex;
+      }
+
+      #AMMarcas-{{ section.id }} .am-marcas__arrow {
+        width: 36px;
+        height: 36px;
+      }
+
+      #AMMarcas-{{ section.id }} .am-marcas__arrow--prev {
+        left: -8px;
+      }
+
+      #AMMarcas-{{ section.id }} .am-marcas__arrow--next {
+        right: -8px;
+      }
+
+      #AMMarcas-{{ section.id }} .am-marcas__arrow svg {
+        width: 15px;
+        height: 15px;
+      }
+    {% endif %}
+
     #AMMarcas-{{ section.id }} {
       padding-top: {{ section.settings.padding_top_mobile }}px;
       padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
@@ -165,7 +261,85 @@
       </div>
     {%- endif -%}
 
-    <ul class="am-marcas__grid" role="list">
+    <div class="am-marcas__carousel">
+
+      {% if section.settings.desktop_carousel %}
+        <button
+          type="button"
+          class="am-marcas__arrow am-marcas__arrow--prev am-marcas__arrow--desktop"
+          data-am-marcas-prev
+          aria-label="Marcas anteriores"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M15 5l-7 7 7 7"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+
+        <button
+          type="button"
+          class="am-marcas__arrow am-marcas__arrow--next am-marcas__arrow--desktop"
+          data-am-marcas-next
+          aria-label="Siguientes marcas"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M9 5l7 7-7 7"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      {% endif %}
+
+      {% if section.settings.mobile_carousel %}
+        <button
+          type="button"
+          class="am-marcas__arrow am-marcas__arrow--prev am-marcas__arrow--mobile"
+          data-am-marcas-prev
+          aria-label="Marcas anteriores"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M15 5l-7 7 7 7"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+
+        <button
+          type="button"
+          class="am-marcas__arrow am-marcas__arrow--next am-marcas__arrow--mobile"
+          data-am-marcas-next
+          aria-label="Siguientes marcas"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M9 5l7 7-7 7"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      {% endif %}
+
+      <ul class="am-marcas__grid" role="list">
       {%- for block in section.blocks -%}
         <li
           class="am-marcas__item"
@@ -205,8 +379,65 @@
         </li>
       {%- endfor -%}
     </ul>
+    </div>
   </div>
 </section>
+
+
+<script>
+  (() => {
+    const section = document.getElementById('AMMarcas-{{ section.id }}');
+    if (!section || section.dataset.carouselReady === 'true') return;
+
+    section.dataset.carouselReady = 'true';
+
+    const grid = section.querySelector('.am-marcas__grid');
+    const prevButtons = section.querySelectorAll('[data-am-marcas-prev]');
+    const nextButtons = section.querySelectorAll('[data-am-marcas-next]');
+
+    if (!grid) return;
+
+    const getScrollAmount = () => {
+      return Math.max(grid.clientWidth * 0.85, 200);
+    };
+
+    const updateButtons = () => {
+      const maxScroll = Math.max(grid.scrollWidth - grid.clientWidth, 0);
+      const current = grid.scrollLeft;
+
+      prevButtons.forEach((button) => {
+        button.disabled = current <= 4;
+      });
+
+      nextButtons.forEach((button) => {
+        button.disabled = current >= maxScroll - 4;
+      });
+    };
+
+    prevButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        grid.scrollBy({
+          left: -getScrollAmount(),
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    nextButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        grid.scrollBy({
+          left: getScrollAmount(),
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    grid.addEventListener('scroll', updateButtons, { passive: true });
+    window.addEventListener('resize', updateButtons);
+
+    updateButtons();
+  })();
+</script>
 
 {% schema %}
 {
