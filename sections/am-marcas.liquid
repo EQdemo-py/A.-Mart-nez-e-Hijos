@@ -112,14 +112,31 @@
 
   #AMMarcas-{{ section.id }} .am-marcas__link {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 10px;
     width: 100%;
-    min-height: var(--am-logo-height);
     text-decoration: none;
     background: transparent;
     border: 0;
     box-shadow: none;
+    color: #0b2742;
+  }
+
+  #AMMarcas-{{ section.id }} .am-marcas__name {
+    display: block;
+    width: 100%;
+    margin: 0;
+    color: #0b2742;
+    font-size: 15px;
+    line-height: 1.3;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  #AMMarcas-{{ section.id }} .am-marcas__link:hover .am-marcas__name {
+    color: #d71920;
   }
 
   #AMMarcas-{{ section.id }} .am-marcas__image {
@@ -219,6 +236,11 @@
 
     #AMMarcas-{{ section.id }} .am-marcas__image {
       height: {{ section.settings.logo_height_mobile }}px;
+    }
+
+    #AMMarcas-{{ section.id }} .am-marcas__name {
+      font-size: 13px;
+      line-height: 1.25;
     }
 
     {% if section.settings.mobile_carousel %}
@@ -368,6 +390,12 @@
           {%- else -%}
             <span class="am-marcas__placeholder">
               {{ block.settings.name | default: 'Agregar logo' }}
+            </span>
+          {%- endif -%}
+
+          {%- if block.settings.name != blank -%}
+            <span class="am-marcas__name">
+              {{ block.settings.name }}
             </span>
           {%- endif -%}
 
