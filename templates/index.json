@@ -289,17 +289,17 @@
     "featured_collection1": {
       "type": "featured-collection",
       "settings": {
-        "collection": "",
-        "products_to_show": 10,
-        "title": "Proven bestsellers",
+        "collection": "organizacion",
+        "products_to_show": 25,
+        "title": "Organizá tu Espacio",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "columns_desktop": 5,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
+        "columns_desktop": 4,
+        "enable_desktop_slider": true,
+        "full_width": true,
+        "show_view_all": false,
         "view_all_style": "solid",
         "color_scheme": "",
         "image_ratio": "adapt",
@@ -309,7 +309,7 @@
         "show_rating": false,
         "quick_add": "bulk",
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 52
       }
