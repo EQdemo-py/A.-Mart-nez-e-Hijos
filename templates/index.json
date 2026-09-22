@@ -311,130 +311,51 @@
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 36,
-        "padding_bottom": 52
+        "padding_bottom": 0
       }
     },
-    "collection_list": {
-      "type": "collection-list",
+    "slideshow_VWRBGz": {
+      "type": "slideshow",
       "blocks": {
-        "featured_collection1": {
-          "type": "featured_collection",
+        "slide_eEpdQp": {
+          "type": "slide",
           "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection2": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection3": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection4": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection5": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
+            "image": "shopify://shop_images/Imagen_de_Codex_17_sept_2026_05_49_02_p.m..png",
+            "image_mobile": "shopify://shop_images/Imagen_de_Codex_17_sept_2026_05_49_43_p.m..png",
+            "image_overlay_opacity": 0,
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-1"
           }
         }
       },
       "block_order": [
-        "featured_collection1",
-        "featured_collection2",
-        "featured_collection3",
-        "featured_collection4",
-        "featured_collection5"
+        "slide_eEpdQp"
       ],
+      "name": "t:sections.slideshow.presets.name",
       "settings": {
-        "title": "Shop our top categories",
-        "heading_size": "h2",
-        "image_ratio": "square",
-        "columns_desktop": 5,
-        "color_scheme": "scheme-4",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 48,
-        "padding_bottom": 60
-      }
-    },
-    "multicolumn1": {
-      "type": "multicolumn",
-      "blocks": {
-        "column7": {
-          "type": "column",
-          "settings": {
-            "title": "Add a customer testimonial",
-            "text": "",
-            "link_label": "Shop now",
-            "link": ""
-          }
-        },
-        "column8": {
-          "type": "column",
-          "settings": {
-            "title": "Add a customer testimonial",
-            "text": "",
-            "link_label": "Shop now",
-            "link": ""
-          }
-        },
-        "column9": {
-          "type": "column",
-          "settings": {
-            "title": "Add a customer testimonial",
-            "text": "",
-            "link_label": "Shop now",
-            "link": ""
-          }
-        },
-        "column10": {
-          "type": "column",
-          "settings": {
-            "title": "Add a customer testimonial",
-            "text": "",
-            "link_label": "Shop now",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column7",
-        "column8",
-        "column9",
-        "column10"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 4,
-        "column_alignment": "center",
-        "background_style": "none",
-        "color_scheme": "scheme-2",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 68,
-        "padding_bottom": 68
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "dots",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": false,
+        "accessibility_info": ""
       }
     },
     "featured_collection2": {
       "type": "featured-collection",
       "settings": {
-        "collection": "",
+        "collection": "escolar-y-oficina",
         "products_to_show": 6,
         "title": "New arrivals",
         "heading_size": "h2",
@@ -529,8 +450,7 @@
     "am_marcas_repYRH",
     "am_marcas_RHMpq7",
     "featured_collection1",
-    "collection_list",
-    "multicolumn1",
+    "slideshow_VWRBGz",
     "featured_collection2",
     "multicolumn2"
   ]
